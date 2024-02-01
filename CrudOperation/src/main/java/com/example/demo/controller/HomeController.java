@@ -56,15 +56,6 @@ public class HomeController {
 	
 	
 	
-//	//handle to fetch a single record
-//	@GetMapping("/getStudent/{rollNo}")
-//	public Student getStudentData(@PathVariable int rollNo) {
-//		Optional<Student> student = studentRepository.findById(rollNo);
-//		Student student1 = student.get();
-//		return student1;
-//	}
-	
-	
 	
 	//handle to fetch a single record
 	@GetMapping("/Student/{rollNo}")
@@ -79,13 +70,7 @@ public class HomeController {
 	
 	
 	
-//	//Handler for fetch all data from db
-//	@GetMapping("/getAllStudent")
-//	public List<Student> getAll() {
-//		List<Student> studentList = studentRepository.findAll();
-//		return studentList;
-//	}
-	
+
 	
 	//Handler for fetch all data from db
 		@GetMapping("/Student")
