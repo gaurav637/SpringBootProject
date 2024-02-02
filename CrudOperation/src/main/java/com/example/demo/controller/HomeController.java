@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Student;
@@ -33,25 +34,24 @@ public class HomeController {
 		return "Welcome to spring boot crud application!";
 	}
 	
-	//Handler for creating new record in DB
-	@PostMapping("/Student")
-	public Student saveData(@RequestBody Student student) {
-		studentRepository.save(student);
-		return student;	
-	}
-	
-	
-//	@PostMapping("/getStudent")
-//	public ResponseEntity<Student> saveData(@RequestBody Student student) {
-//		Student result = null;
-//		try {
-//		     result = sr.addStudent(student);
-//			return ResponseEntity.of(Optional.of(result));
-//			
-//		}catch(Exception e) {
-//			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-//		}
+//	//Handler for creating new record in DB
+//	@PostMapping("/Student")
+//	public Student saveData(@RequestBody Student student) {
+//		studentRepository.save(student);
+//		return student;	
 //	}
+//	
+	
+	 @PostMapping("/books")
+	    public ResponseEntity<Student> addStudent(@RequestBody Student student){
+	       Student b = null;
+	       try{
+	        b = sr.addBook(student);
+	        return ResponseEntity.of(Optional.of(b));
+	       }catch(Exception e){
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+	       }
+	    }
 	
 	
 	

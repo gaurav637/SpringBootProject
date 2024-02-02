@@ -56,10 +56,11 @@ public class serviceImpl implements service {
 	}
 
 
+
 	@Override
-	public Student addStudent(Student student) {
-		Student ans = studentrepository.save(student);
-		return ans;
+	public Student addBook(Student student) {
+		Student st = studentrepository.save(student);
+		return st;
 	}
 
 }
