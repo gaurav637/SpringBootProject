@@ -19,5 +19,6 @@ public interface service {
 
 	public Student studentUpdate(Student student,int id);
 
+
 	public Student addStudent(Student student);
 }
